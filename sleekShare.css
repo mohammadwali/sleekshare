@@ -1,0 +1,215 @@
+/*
+ * SleekShare Plugin V1.01 CSS
+ * A Tiny jquery based share plugin with share counts. 
+ * http://mwa.li/sleekShare
+ *
+ * Plugin Author : Mohammad wali
+ * Release date : 25 February 2014
+ */
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300,600,700,400');
+
+body,html,.sleekshare, #sleekshare, #sleekshare *, .sleekshare * {
+    margin: 0;
+    padding: 0;
+}
+
+.sleekshare, #sleekshare, #sleekshare *, .sleekshare * {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: 400;
+}
+
+div#sleekshare {
+    position: fixed;
+    top: 50%;
+}
+
+div#sleekshare[data-sleekshare-position=left] {
+    left: 0;
+}
+
+div#sleekshare[data-sleekshare-position=right] {
+    right: 0;
+}
+
+#sleekshare ul {
+    width: 40px;
+    display: block;
+    list-style: none;
+    text-align: center;
+}
+
+#sleekshare li {
+    float: left;
+    width: 100%;
+}
+
+#sleekshare li#sleekshare-tcount {
+    background: #FF6501;
+    color: #fff;
+    padding: 10px 1px 0 0px;
+    font-size: 12px;
+    height: 50px;
+}
+
+#sleekshare[data-sleekshare-position=left] li#sleekshare-tcount {
+    padding: 10px 1px 0 0px;
+}
+
+#sleekshare[data-sleekshare-position=right] li#sleekshare-tcount {
+    padding: 10px 0px 0 1px;
+}
+
+#sleekshare li[id^=sleekshare-] a[id^=ico-], #sleekshare li#sleekshare-comment a[data-sleekshare=scrollto] {
+    display: block;
+    width: 40px;
+    height: 38px;
+    background-image: url(sleekshare-icons.jpg);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#sleekshare a[data-sleekshare=scrollto] {
+    background-position: 50% -5px;
+}
+
+#sleekshare a#ico-facebook {
+    background-position: 50% -139px;
+}
+
+#sleekshare a#ico-google {
+    background-position: 50% -182px;
+}
+
+#sleekshare a#ico-twitter {
+    background-position: 50% -364px;
+}
+
+#sleekshare a#ico-reddit {
+    background-position: 50% -318px;
+}
+
+#sleekshare a#ico-linkedin {
+    background-position: 50% -229px;
+}
+
+#sleekshare a#ico-delicious {
+    background-position: 50% -50px;
+}
+
+#sleekshare a#ico-stumbleupon {
+    background-position: 50% -408px;
+}
+
+#sleekshare a#ico-pinterest {
+    background-position: 50% -274px;
+}
+
+#sleekshare li a span {
+    margin-top: -16px;
+    padding: 4px 8px;
+    min-width: 80px;
+    width: auto;
+    line-height: 24px;
+    font-size: 14px;
+    top: 50%;
+    white-space: nowrap;
+    opacity: 0;
+    color: #fff;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: opacity 0.3s,left 0.3s,right 0.3s;
+    -moz-transition: opacity 0.3s,left 0.3s,right 0.3s;
+    -ms-transition: opacity 0.3s,left 0.3s,right 0.3s;
+    -o-transition: opacity 0.3s,left 0.3s,right 0.3s;
+    transition: opacity 0.3s,left 0.3s,right 0.3s;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+
+#sleekshare[data-sleekshare-position=left] li a span {
+    left: -600%;
+}
+
+#sleekshare[data-sleekshare-position=right] li a span {
+    right: -600%;
+}
+
+#sleekshare li a span::before {
+    margin-top: -4px;
+    width: 8px;
+    height: 8px;
+    content: "";
+    display: block;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+}
+
+#sleekshare[data-sleekshare-position=left] li a span::before {
+    left: -4px;
+}
+
+#sleekshare[data-sleekshare-position=right] li a span::before {
+    right: -4px;
+}
+
+#sleekshare[data-sleekshare-position=left] a:hover span {
+    left: 130%;
+}
+
+#sleekshare[data-sleekshare-position=right] a:hover span {
+    right: 130%;
+}
+
+#sleekshare a:hover span {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+#sleekshare a#ico-twitter span,#sleekshare a#ico-twitter span::before {
+    background: #6CDFEA;
+}
+
+#sleekshare a#ico-delicious span,#sleekshare a#ico-delicious span::before {
+    background: #39F;
+}
+
+#sleekshare a#ico-google span,#sleekshare a#ico-google span::before {
+    background: #E34429;
+}
+
+#sleekshare a#ico-facebook span,#sleekshare a#ico-facebook span::before {
+    background: #234999;
+}
+
+#sleekshare a#ico-reddit span,#sleekshare a#ico-reddit span::before {
+    background: #FF4500;
+}
+
+#sleekshare a#ico-stumbleupon span,#sleekshare a#ico-stumbleupon span::before {
+    background: #EB4823;
+}
+
+#sleekshare a#ico-linkedin span,#sleekshare a#ico-linkedin span::before {
+    background: #007BB6;
+}
+
+#sleekshare a#ico-pinterest span,#sleekshare a#ico-pinterest span::before {
+    background: #CA2128;
+}
+
